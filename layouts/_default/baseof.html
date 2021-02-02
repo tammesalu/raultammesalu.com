@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        {{ $css := resources.Get "style.css" }}
+        <link rel="stylesheet" href="{{ $css.Permalink }}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
+    </head>
     <body>
         {{ block "main" . }}
 
